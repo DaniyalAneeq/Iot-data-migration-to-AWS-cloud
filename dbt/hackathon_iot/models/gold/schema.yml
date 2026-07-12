@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: gold_daily_device_metrics
+    columns:
+      - name: device_id
+        tests:
+          - not_null
+      - name: event_date
+        tests:
+          - not_null
+      - name: reading_count
+        tests:
+          - not_null

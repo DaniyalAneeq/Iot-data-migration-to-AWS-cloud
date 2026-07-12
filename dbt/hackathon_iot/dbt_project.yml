@@ -1,0 +1,20 @@
+name: 'hackathon_iot'
+version: '1.0.0'
+config-version: 2
+
+profile: 'hackathon_iot'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  hackathon_iot:
+    silver:
+      +schema: CLEAN
+      +materialized: table
+    gold:
+      +schema: ANALYTICS
+      +materialized: table
